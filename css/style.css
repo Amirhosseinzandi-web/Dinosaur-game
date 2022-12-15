@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  width: 100%;
+  height: 100vh;
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 768px;
+  height: 458px;
+  /* border: 1px solid black; */
+  /* box-shadow: 0px 0px 90px gray; */
+  position: relative;
+  overflow: hidden;
+}
+.background{
+    width: 100%;
+    height: 100%;
+    background-image: url(../pic/bg.png);
+    animation: bg 2.5s infinite linear;
+}
+
+@keyframes bg {
+    0% {background-position: 768px 458px;}
+    100% {background-position: 0px 458px;}
+}
+
+.container p{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 25px;
+    padding: 10px;
+    background-color: gray;
+}
+.dinosaur{
+    width: 114px;
+    height: 108px;
+    position: absolute;
+    left: 30px;
+    top: 255px;
+    background-image: url(../pic/dinosaur.png);
+    background-size: cover;
+    z-index: 100;
+}
+.cactus{
+   width: 70px;
+   height: 70px;
+   position: absolute; 
+   top: 290px;
+   left: 768px;
+   background-image: url(../pic/cactus.png);
+   background-size: cover;
+   animation: cactus 2.8s linear infinite;
+   /* animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); */
+}
+
+@keyframes cactus {
+    0%{left: 768px;}
+    100%{left: -90px;}
+}
+
+.jump{
+    animation: jump .3s linear infinite alternate;
+}
+
+@keyframes jump {
+    0%{top: 255px;}
+    100%{top: 50px;}
+}
+
+.btn{
+  width: 150px;
+  height: 100px;
+  background-color: gray;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 30px;
+  cursor: pointer;
+  transition: .5s linear;
+}
+.animationStop{
+  animation-play-state: paused;
+}
+.hard{
+  width: 100px;
+  height: 50px;
+  background-color: violet;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  cursor: pointer;
+  transition: .5s;
+  /* box-shadow: 10px 10px 10px gray; */
+}
+.none{
+  pointer-events: none;
+  opacity: .5;
+}
