@@ -23,7 +23,6 @@ function start(){
   cactus.classList.remove("animationStop")
   if(dif==true){
       background.style.animationDuration = ".9s"
-  // cactus.style.animationDuration = "1.8s"
       cactus.style.animationTimingFunction = "cubic-bezier(0.19, 1, 0.22, 1)"
       hardVersion.classList.add("none")
   }
@@ -39,11 +38,7 @@ btn.addEventListener("click" , ()=>{
 hardVersion.addEventListener("click" , (e)=>{
     dif = true
     hardVersion.style.boxShadow = "0px 0px 30px gray"
-    e.target.classList.add("none")
-    // window.location.reload()
-    
-    // cactus
-    
+    e.target.classList.add("none")  
 })
 
 body.addEventListener("keyup", (e) => {
