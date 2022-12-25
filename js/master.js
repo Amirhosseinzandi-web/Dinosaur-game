@@ -24,15 +24,24 @@ function start(){
   if(dif==true){
       background.style.animationDuration = ".9s"
       cactus.style.animationTimingFunction = "cubic-bezier(0.19, 1, 0.22, 1)"
-      hardVersion.classList.add("none")
   }
-  else{
-      hardVersion.classList.add("none")
+  
+  hardVersion.classList.add("none")
+  // start()
+    flag = true;
+    setTimeout(()=>{
+      emp = true
+    },100)
+    if(emp==true){
+      dinosaur.classList.add("jump");
+    setTimeout(() => {
+      dinosaur.classList.remove("jump");
+    }, 600);
   }
 }
 
 btn.addEventListener("click" , ()=>{
-   start()
+  start()
 })
 
 hardVersion.addEventListener("click" , (e)=>{
@@ -44,16 +53,6 @@ hardVersion.addEventListener("click" , (e)=>{
 body.addEventListener("keyup", (e) => {
   if (e.code == "Space") {
     start()
-    flag = true;
-    setTimeout(()=>{
-      emp = true
-    },100)
-    if(emp==true){
-      dinosaur.classList.add("jump");
-    setTimeout(() => {
-      dinosaur.classList.remove("jump");
-    }, 600);
-  }
     }
 });
 
